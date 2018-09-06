@@ -1,0 +1,41 @@
+{
+  "name": "plan-b",
+  "version": "0.1.0",
+  "description": "Simple javascript lib for executing tasks on web pages",
+  "main": "dist/plan-b.js",
+  "module": "dist/commonjs/index.js",
+  "types": "dist/commonjs/index.d.ts",
+  "typings": "dist/commonjs/index.d.ts",
+  "scripts": {
+    "build": "tsc && gulp",
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinAlt/shedulerJS"
+  },
+  "author": "Kirill Kuryanov",
+  "license": "MIT",
+  "keywords": [
+    "tasks",
+    "planner",
+    "scheduler",
+    "browser"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "tsify": "^4.0.0",
+    "typescript": "^3.0.3",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
