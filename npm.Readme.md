@@ -1,38 +1,17 @@
 # plan-b
 Simple javascript lib for executing tasks on web pages
 
-## Download
-
-* [Minified](https://github.com/dinAlt/plan-b/releases/download/v0.1/plan-b.min.js)
-* [Not minified](https://github.com/dinAlt/plan-b/releases/download/v0.1/plan-b.js)
-* [Source maps](https://github.com/dinAlt/plan-b/releases/download/v0.1/plan-b.js.map)
-
 ## Installation
-### Via npm:
 ```shell
 $ npm i --save @dinalt/plan-b
 ```
 
-And then, for Node.js:
-```js
-var planB = require("@dinalt/plan-b")
-```
-
-for TypeScript:
-```ts
-import { plan, lastExecuted } from "@dinalt/plan-b";
-```
-
-
-### In a browser:
-```html
-<script src="plan-b.min.js"></script>
-```
-
 ## Usage
 
-JavaScript:
+Node:
 ```js
+var planB = require("@dinalt/plan-b")
+
 document.addEventListener("DOMContentLoaded", function () {
     planB.plan([
         //This will be executed once
@@ -65,16 +44,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 ```
 
-Similarly, for TypeScript
+TypeScript:
 ```ts
-document.addEventListener("DOMContentLoaded", function() {
-    plan([
-        ...
-    ]);
+import { plan, lastExecuted } from "@dinalt/plan-b";
 
-    console.log(lastExecuted("..."));
-});
+plan([
+    ...
+]);
+
+console.log(lastExecuted("..."));
 ```
+
+Browser ``<script>`` tag:
+
+Compiled version of the library could be found in "dist" directory of root package folder.
+
 ## Explanation
 
 ### Task object
@@ -113,24 +97,3 @@ When ``planB.plan(tasks)`` function is called, library checks execution triggers
 The ``trigger.check`` fires before each task launch.
 
 For storing task last execution date and time, browser local store (or cookies, if local store is unsupported) are used.
-
-## Build from sources
-
-You need [nodejs](https://nodejs.org) and [npm](https://www.npmjs.com/) installed before you can proceed.
-
-Cloning github repository and installing dependencies:
-```shell
-$ git clone https://github.com/dinAlt/plan-b.git
-$ cd plan-b
-$ npm install
-```
-
-Building:
-```shell
-$ npm run build
-```
-
-Testing: 
-```shell
-$ npm run test
-```
