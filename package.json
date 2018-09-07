@@ -1,6 +1,6 @@
 {
   "name": "@dinalt/plan-b",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple javascript lib for executing tasks on web pages",
   "main": "dist/plan-b.js",
   "module": "dist/commonjs/index.js",
